@@ -1,7 +1,29 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'http',
+        hostname: 'prueba-tecnica-api-tienda-moviles.onrender.com',
+        pathname: '/images/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'prueba-tecnica-api-tienda-moviles.onrender.com',
+        pathname: '/images/**',
+      },
+    ],
+  },
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: '/catalog',
+        permanent: true, 
+      },
+    ];
+  },
 };
 
 export default nextConfig;

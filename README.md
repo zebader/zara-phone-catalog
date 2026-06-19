@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ZARA CHALLENGE
 
-## Getting Started
+## Como iniciar la applicacion
 
-First, run the development server:
+### Modo Desarrollo
+
+Sirve la aplicación con Fast Refresh y los assets sin minimizar para facilitar el debugging
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Modo Producción
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Para compilar la aplicación optimizando, concatenando y minimizando todos los assets, y posteriormente levantar el servidor de producción
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. **Compilar el proyecto:**
 
-## Learn More
+```bash
+npm run build
+```
 
-To learn more about Next.js, take a look at the following resources:
+2. **Servir el proyecto en producción:**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run start
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Abre [http://localhost:3000](http://localhost:3000) con el browser para ver el resultado.
 
-## Deploy on Vercel
+## Decisiones técnicas
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- CSS modules: para scopear estilos en los componentes evitando que se pisen clases globales, es rapido y  ligero al procesarse en tiempo de compilación, ademas de ser el built-in de Next.js.
+- fetch para api: Next.js esta preparado para gestionarlo cacheando, evita deduplicaciones de peticiones identicas, asi no utilizamos librerias de terceros como Axios o React query que para este caso añaden overhead y peso al bundle.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Arquitectura: he optado por Feature-Driven Architecture, por un lado tener el folder de app/ para tema enrutado y manejar solo las pages desde ahi, La lógica de negocio se centraliza en una carpeta feature donde se crea el contenido por dominio, por un lado tenemos el catalog con la lista y detalle y por otro el cart, cada una con sus pages, ui, hooks, context etc... por otro lado tema de recursos transversales en otras carpetas los services, types, utils, etc... asi lo utlizo para separar conceptos (SoC) con mucha cohesion y poco acoplamiento.
