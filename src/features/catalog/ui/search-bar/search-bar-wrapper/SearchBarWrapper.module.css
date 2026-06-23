@@ -1,0 +1,13 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: var(--desktop-width);
+    margin: 0 auto;
+    padding: var(--size-large) var(--page-padding);
+    position: sticky;
+    top: var(--navbar-height); 
+    z-index: 100;
+    background-color: var(--color-bg);
+    gap: var(--size-small);
+}

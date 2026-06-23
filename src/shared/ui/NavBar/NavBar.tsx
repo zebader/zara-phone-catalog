@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from './NavBar.module.css';
 import logo from '../../assets/mbst-logo.svg';
-import { NavBarCart } from './NavBarCart/NavBarCart';
+import { NavBarCart } from './navbar-cart/NavBarCart';
 import Link from 'next/link';
 export const NavBar = () => {
 

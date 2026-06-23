@@ -1,9 +1,7 @@
 import { Catalog } from "@/features/catalog/pages";
 
-export default function Page() {
+export default async function Page({ searchParams }: { searchParams: Promise<{ search: string }> }) {
   return (
-    <div>
-      <Catalog />
-    </div>
+    <Catalog searchParams={searchParams} />
   );
 }

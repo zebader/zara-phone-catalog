@@ -1,4 +1,4 @@
-import { FetchPhonesParams, PhoneProduct, PhoneProductDetail } from '@/types/api';
+import { FetchPhonesParams, PhoneProduct, PhoneProductDetail } from '@/shared/types/api';
 
 const API_BASE_URL = `${process.env.ZARA_API_BASE_URL}`;
 const API_KEY = process.env.ZARA_API_KEY || '';
