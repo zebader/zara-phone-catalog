@@ -6,6 +6,10 @@
     max-width: var(--desktop-width);
     margin: 0 auto;
     padding: 28px var(--page-padding);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: var(--color-bg);
 }
 
 .imageWrapper {
