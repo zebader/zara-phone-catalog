@@ -1,0 +1,16 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: var(--desktop-width);
+    margin: 0 auto;
+    padding: 28px var(--page-padding);
+}
+
+.imageWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 74px;
+  }

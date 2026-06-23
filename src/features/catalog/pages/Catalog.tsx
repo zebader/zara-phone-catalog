@@ -1,5 +1,5 @@
-import { getPhoneProducts } from "@/services/api";
-import { PhoneProduct } from "@/types/api";
+import { getPhoneProducts } from "@/shared/services/api";
+import { PhoneProduct } from "@/shared/types/api";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -17,21 +17,20 @@ export const Catalog = async () => {
     return <div>No products found</div>;
   }
 
-    return (
+  return (
+    <div>
       <div>
-        <h1 className="text-primary">Catalog</h1>
-        <div>
-          {phones.map((phone,index) => (
-            <div key={phone.id + index}>
-              <Link href={`/catalog/${phone.id}`}>
-                <Image src={phone.imageUrl} alt={phone.name} width={100} height={100} loading="eager"/>
-                <h2>{phone.name}</h2>
-                <p>{phone.brand}</p>
-                <p>{phone.basePrice}</p>
-              </Link>
-            </div>
-          ))}
-        </div>
+        {phones.map((phone,index) => (
+          <div key={phone.id + index}>
+            <Link href={`/catalog/${phone.id}`}>
+              <Image src={phone.imageUrl} alt={phone.name} width={100} height={100} loading="eager"/>
+              <h2>{phone.name}</h2>
+              <p>{phone.brand}</p>
+              <p>{phone.basePrice}</p>
+            </Link>
+          </div>
+        ))}
       </div>
-    );
-  }
+    </div>
+  );
+}

@@ -20,7 +20,7 @@ const nextConfig: NextConfig = {
       {
         source: '/',
         destination: '/catalog',
-        permanent: true, 
+        permanent: true,
       },
     ];
   },
