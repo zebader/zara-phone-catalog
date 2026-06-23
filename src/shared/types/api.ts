@@ -23,6 +23,12 @@ export type PhoneSpecs = {
   screenRefreshRate: string;
 };
 
+export type FullProductSpecs = {
+  brand: string;
+  name: string;
+  description: string;
+} & PhoneSpecs;
+
 export type ColorOption = {
   name: string;
   hexCode: string;
@@ -42,7 +48,7 @@ export type PhoneProductDetail = {
   basePrice: number;
   rating: number;
   specs: PhoneSpecs;
-  colorOptions: ColorOption[];
-  storageOptions: StorageOption[];
-  similarProducts: PhoneProduct[];
+  colorOptions: Array<ColorOption>;
+  storageOptions: Array<StorageOption>;
+  similarProducts: Array<PhoneProduct>;
 };

@@ -1,0 +1,27 @@
+.button {
+    background-color: var(--color-primary);
+    color: var(--color-bg);
+    padding: var(--size-small);
+    cursor: pointer;
+    border: none;
+    width: 100%;
+    text-align: center;
+}
+
+.button.fullWidth {
+    width: 100%;
+}
+
+.button.disabled {
+    background-color: var(--color-disabled);
+    color: var(--color-primary);
+    cursor: not-allowed;
+}
+
+.label {
+    color: var(--color-bg);
+}
+
+.label.disabled {
+    color: var(--color-disabled-contrast);
+}

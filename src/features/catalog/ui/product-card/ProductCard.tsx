@@ -5,9 +5,9 @@ import styles from './ProductCard.module.css';
 export const ProductCard = ({ product }: { product: PhoneProduct }) => {
   return (
     <div className={styles.container}>
-      <Link  href={`/catalog/${product.id}`} className={styles.cardContent}>
+      <Link href={`/catalog/${product.id}`} className={styles.cardContent}>
         <div className={styles.imageContainer}>
-          <Image className={styles.image} src={product.imageUrl} alt={product.name} fill />
+          <Image className={styles.image} src={product.imageUrl} alt={product.name} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
         </div>
         <div className={styles.content}>
           <div className={styles.contentBrandContainer}>

@@ -6,7 +6,10 @@
   --color-placeholder: #AAAAAA;
   --color-bg: #ffffff;
   --color-disabled: #F3F2F2;
-  --desktop-width: 1920px;
+  --color-disabled-contrast: #C2BFBC;
+  --max-width: 1920px;
+  --narrow-max-width: 1200px;
+  --size-xxxsmall: 2px;
   --size-xxsmall: 4px;
   --size-xsmall: 8px;
   --size-small: 16px;

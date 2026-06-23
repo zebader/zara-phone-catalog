@@ -1,2 +1,2 @@
 export * from "./catalog/Catalog";
-export * from "./CatalogDetail";
+export * from "./catalog-details/CatalogDetails";

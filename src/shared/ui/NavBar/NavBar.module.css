@@ -10,7 +10,7 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    max-width: var(--desktop-width);
+    max-width: var(--max-width);
     margin: 0 auto;
     padding: 28px var(--page-padding);
     height: var(--navbar-height);

@@ -1,0 +1,33 @@
+.specsContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: var(--size-large);
+}
+
+.specItem {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    border-bottom: 1px solid var(--color-terciary);
+    padding: var(--size-small) 0;
+    gap: var(--size-medium);
+
+    &:first-child {
+        border-top: 1px solid var(--color-terciary);
+    }
+}
+
+.specItemLeft {
+    flex:4;
+}
+
+@media (min-width: 768px) {
+    .specItemLeft {
+        flex:1;
+    }
+}
+
+.specItemRight {
+    flex:3;
+}
