@@ -1,3 +1,10 @@
+.wrapper {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: var(--color-bg);
+}
 .container {
     display: flex;
     align-items: center;
@@ -6,11 +13,8 @@
     max-width: var(--desktop-width);
     margin: 0 auto;
     padding: 28px var(--page-padding);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background-color: var(--color-bg);
     height: var(--navbar-height);
+
 }
 
 .imageWrapper {

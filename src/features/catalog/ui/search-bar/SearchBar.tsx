@@ -2,11 +2,13 @@
 import { useState } from 'react';
 import styles from './SearchBar.module.css';
 import { useDebouncedCallback } from 'use-debounce';
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 
 export const SearchBar = () => {
   const { replace } = useRouter();
-  const [searchQuery, setSearchQuery] = useState('');
+  const searchParams = useSearchParams();
+  const search = searchParams.get('search');
+  const [searchQuery, setSearchQuery] = useState(search ?? '');
 
   const handleSearch = useDebouncedCallback((value) => {
     replace(`/catalog?search=${value}`);

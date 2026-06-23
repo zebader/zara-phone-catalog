@@ -1,0 +1,79 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: space-between;
+    background-color: var(--color-bg);
+    overflow: hidden;
+    border: 1px solid var(--color-primary);
+
+    margin-top: -1px;
+    margin-left: -1px;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-primary);
+    z-index: 0;
+    transform: translateY(100%); 
+    transition: transform 0.5s cubic-bezier(0.33, 1, 0.68, 1);
+  }
+  
+.container:hover::before {
+    transform: translateY(0);
+}
+
+.cardContent {
+    position: relative; 
+    z-index: 1; 
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.imageContainer {
+    position: relative;
+    width: 100%;
+    height: 257px;
+    
+}
+
+.image {
+    object-fit: contain;
+    height: auto;
+    padding: var(--size-small);
+}
+
+.content {
+    padding: var(--size-small);
+    display: flex;
+    justify-content: space-between;
+    gap: var(--size-xsmall);
+}
+
+.contentBrandContainer {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-xsmall);
+}
+
+.contentPriceContainer {
+    display: flex;
+    align-items: flex-end;
+}
+
+.title, .price, .brand  {
+    transition: color 0.5s ease;
+}
+
+.container:hover .title,
+.container:hover .price,
+.container:hover .brand {
+  color: var(--color-bg);
+}
+

@@ -1,4 +1,6 @@
 .container {
     width: 100%;
-    padding: 0 var(--page-padding);
+    padding: var(--size-xlarge) var(--page-padding);
+    margin: 0 auto;
+    max-width: var(--desktop-width);
 }
