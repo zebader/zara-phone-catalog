@@ -11,18 +11,18 @@ export const Catalog = async ({ searchParams }: { searchParams: Promise<{ search
   try {
     products = await getPhoneProducts({ search: search ?? undefined });
   } catch (error) {
-    console.error("Error al obtener los productos:", error);
+    console.error("Error fetching products:", error);
   }
 
   const totalResults = products.length;
 
   return (
-    <div>
+    <div aria-label="Phone catalog">
       <SearchBarWrapper itemsQuantity={totalResults}/>
 
       <div className={styles.container}>
         {totalResults === 0 ? (
-          <p className="text-primary">No products found</p>
+          <p className="text-primary" role="status">No products found</p>
         ) : (
           <ProductGrid products={products}/>
         )}

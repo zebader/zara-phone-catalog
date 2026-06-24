@@ -16,8 +16,8 @@ export const CartListItem = ({ id, name, price, image, storage, color }: CartLis
 
   return (
     <div className={styles.container}>
-      <div className={styles.imageContainer}>
-        <Image className={styles.image} src={image} alt={name} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"/>
+      <div className={styles.imageContainer} aria-label={`Product image for ${name}`}>
+        <Image className={styles.image} src={image} alt="" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" loading="eager" aria-hidden="true" />
       </div>
       <div className={styles.content}>
         <div className={styles.contentTitle}>
@@ -27,7 +27,14 @@ export const CartListItem = ({ id, name, price, image, storage, color }: CartLis
           </div>
           <p className="title-3">{`${price} EUR`}</p>
         </div>
-        <button className={styles.contentRemoveButton} onClick={handleRemoveFromCart}>Eliminar</button>
+        <button
+          type="button"
+          className={styles.contentRemoveButton}
+          onClick={handleRemoveFromCart}
+          aria-label={`Remove ${name}`}
+        >
+          Remove
+        </button>
       </div>
     </div>
   );

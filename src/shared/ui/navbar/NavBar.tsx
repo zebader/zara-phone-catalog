@@ -6,10 +6,10 @@ import Link from 'next/link';
 export const NavBar = () => {
 
   return (
-    <nav className={styles.wrapper}>
+    <nav className={styles.wrapper} aria-label="Main navigation">
       <div className={styles.container}>
-        <Link href="/" className={styles.imageWrapper}>
-          <Image src={logo} alt="Logo para volver a la pagina principal" width={74} height={24} />
+        <Link href="/" className={styles.imageWrapper} aria-label="Go to the home page">
+          <Image src={logo} alt="" width={74} height={24} aria-hidden="true" />
         </Link>
         <NavBarCart />
       </div>

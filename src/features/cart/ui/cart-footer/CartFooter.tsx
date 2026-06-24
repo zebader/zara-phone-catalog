@@ -10,28 +10,30 @@ export const CartFooter = ({ totalPrice, hasCartItems }: { totalPrice: number, h
   };
 
   const handlePay = () => {
-    alert('El ejercicio termina aqui, muchas gracias por la oportunidad y vuestro tiempo!');
+    alert('This exercise ends here. Thank you very much for the opportunity and your time!');
   };
 
   return (
-    <div className={styles.wrapper}>
-      {hasCartItems && <div className={styles.totalPriceTop}>
-        <p className="title-4">Total</p>
-        <p className="title-4">{`${totalPrice} EUR`}</p>
-      </div>}
+    <footer className={styles.wrapper} aria-label="Cart summary">
+      {hasCartItems && (
+        <div className={styles.totalPriceTop} aria-live="polite">
+          <p className="title-4">Total</p>
+          <p className="title-4">{`${totalPrice} EUR`}</p>
+        </div>
+      )}
       <div className={`${styles.container} ${!hasCartItems ? styles.center : ''}`}>
         <div className={styles.buttonContainer}>
           <Button onClick={handleContinueShopping} fullWidth outline label="Continue shopping" />
         </div>
         {hasCartItems && (
           <div className={styles.paymentContainer}>
-            <p className={`${styles.totalPrice} title-4`}>{`Total ${totalPrice} EUR`}</p>
+            <p className={`${styles.totalPrice} title-4`} aria-live="polite">{`Total ${totalPrice} EUR`}</p>
             <div className={styles.buttonContainer}>
               <Button onClick={handlePay} fullWidth label="Pay" />
             </div>
           </div>
         )}
       </div>
-    </div>
+    </footer>
   );
 };

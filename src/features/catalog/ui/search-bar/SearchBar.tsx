@@ -27,13 +27,21 @@ export const SearchBar = () => {
 
   return (
     <div className={styles.container}>
-      <input onChange={handleChange} value={searchQuery ?? ''} id="search-input" className={styles.searchInput + ' ' + 'text-4'} type="search" placeholder="Search for a smartphone..." />
+      <input
+        onChange={handleChange}
+        value={searchQuery ?? ''}
+        id="search-input"
+        className={styles.searchInput + ' ' + 'text-4'}
+        type="search"
+        placeholder="Search for a smartphone..."
+        aria-label="Search for a smartphone"
+      />
       {searchQuery && (
         <button
           className={styles.clearButton}
           onClick={handleClear}
           type="button"
-          aria-label="Limpiar búsqueda"
+          aria-label="Clear search"
         >
           ✕
         </button>

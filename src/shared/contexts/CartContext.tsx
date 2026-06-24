@@ -32,7 +32,7 @@ const readCartFromStorage = (): Array<CartItem> => {
 
 let cart: Array<CartItem> = [];
 const listeners = new Set<() => void>();
-const SERVER_CART_SNAPSHOT: Array<CartItem> = []; // Para evitar loops al settear el state del carrito en el mount
+const SERVER_CART_SNAPSHOT: Array<CartItem> = []; // Avoid loops when setting cart state on mount
 
 if (typeof window !== "undefined") {
   cart = readCartFromStorage();

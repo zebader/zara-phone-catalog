@@ -3,16 +3,18 @@ import { ProductCard } from "../product-card/ProductCard";
 import styles from './ProductCarousel.module.css';
 
 export const ProductCarousel = ({ products, title }: { products: Array<PhoneProduct>, title?: string }) => {
+  const titleId = title ? 'carousel-title' : undefined;
+
   return (
-    <div className={styles.container}>
-      {title && <h2 className="title-2">{title}</h2>}
-      <div className={styles.carouselContent}>
+    <section className={styles.container} aria-labelledby={titleId}>
+      {title && <h2 id={titleId} className="title-2">{title}</h2>}
+      <ul className={styles.carouselContent} aria-label={title ?? 'Products'}>
         {products.map((product, index) => (
-          <div key={`${product.id}-${index}`} className={styles.cardContainer}>
+          <li key={`${product.id}-${index}`} className={styles.cardContainer}>
             <ProductCard product={product} />
-          </div>
+          </li>
         ))}
-      </div>
-    </div>
+      </ul>
+    </section>
   );
 }

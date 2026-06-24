@@ -26,7 +26,7 @@ export const  getPhoneProducts = async (params: FetchPhonesParams = {}): Promise
   });
 
   if (!res.ok) {
-    throw new Error(`Error al obtener los productos: ${res.status} ${res.statusText}`);
+    throw new Error(`Error fetching products: ${res.status} ${res.statusText}`);
   }
 
   return res.json();
@@ -44,7 +44,7 @@ export const getPhoneProductById = async (id: string): Promise<PhoneProductDetai
   });
 
   if (!res.ok) {
-    throw new Error(`Error al obtener el producto: ${res.status} ${res.statusText}`);
+    throw new Error(`Error fetching product: ${res.status} ${res.statusText}`);
   }
 
   return res.json();

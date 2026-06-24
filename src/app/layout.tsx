@@ -5,7 +5,7 @@ import { CartProvider } from "@/shared/contexts";
 
 export const metadata: Metadata = {
   title: "Zara challenge",
-  description: "Aplicación web enfocada en la visualización, búsqueda y gestión de un catálogo de teléfonos móviles",
+  description: "Web application focused on browsing, searching, and managing a mobile phone catalog",
 };
 
 export default function RootLayout({
@@ -18,7 +18,7 @@ export default function RootLayout({
       <body>
         <CartProvider>
           <NavBar />
-          {children}
+          <main id="main-content">{children}</main>
         </CartProvider>
       </body>
     </html>

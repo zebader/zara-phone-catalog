@@ -12,11 +12,11 @@ export const CatalogDetails = async ({ params }: { params: Promise<{ id: string 
   try {
     product = await getPhoneProductById(id);
   } catch (error) {
-    console.error("Error al obtener el producto:", error);
+    console.error("Error fetching product:", error);
   }
 
   if (!product) {
-    return <div>The product was not found</div>;
+    return <p role="alert">The product was not found</p>;
   }
 
   const { specs, colorOptions, name, basePrice, description, brand, storageOptions, similarProducts } = product;

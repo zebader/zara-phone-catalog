@@ -13,5 +13,15 @@ export const Button = ({ children, onClick , fullWidth = false, disabled = false
   const buttonClasses = `${styles.button} ${fullWidth ? styles.fullWidth : ''} ${disabled ? styles.disabled : ''} ${outline ? styles.outline : ''}`;
   const labelClasses = `${styles.label} ${disabled ? styles.disabled : ''} ${label ? 'title-3' : ''} ${outline ? styles.outlined : ''}`;
 
-  return <button className={buttonClasses} onClick={onClick}>{children || <p className={labelClasses}>{label}</p>}</button>;
+  return (
+    <button
+      type="button"
+      className={buttonClasses}
+      onClick={onClick}
+      disabled={disabled}
+      aria-label={label}
+    >
+      {children || <p className={labelClasses}>{label}</p>}
+    </button>
+  );
 };

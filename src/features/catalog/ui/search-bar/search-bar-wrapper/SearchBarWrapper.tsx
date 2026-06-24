@@ -5,7 +5,7 @@ export const SearchBarWrapper = ({ itemsQuantity }: { itemsQuantity: number }) =
     <div className={styles.wrapper}>
       <div className={styles.container}>
         <SearchBar />
-        <p className="title-3">{itemsQuantity} Results</p>
+        <p className="title-3" aria-live="polite">{itemsQuantity} Results</p>
       </div>
     </div>
   );

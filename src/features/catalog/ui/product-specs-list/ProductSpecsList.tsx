@@ -3,16 +3,16 @@ import { FullProductSpecs } from "@/shared/types/api";
 
 export const ProductSpecsList = ({ specs }: { specs: FullProductSpecs }) => {
   return (
-    <div className={styles.specsContainer}>
-      <h2 className="title-2">Specifications</h2>
-      <div >
+    <section className={styles.specsContainer} aria-labelledby="specs-title">
+      <h2 id="specs-title" className="title-2">Specifications</h2>
+      <dl>
         {Object.entries(specs).map(([key, value]) => (
           <div className={styles.specItem} key={key}>
-            <p className={`${styles.specItemLeft} title-3`}>{key}</p>
-            <p className={`${styles.specItemRight} text-1`}>{value}</p>
+            <dt className={`${styles.specItemLeft} title-3`}>{key}</dt>
+            <dd className={`${styles.specItemRight} text-1`}>{value}</dd>
           </div>
         ))}
-      </div>
-    </div>
+      </dl>
+    </section>
   )
 }

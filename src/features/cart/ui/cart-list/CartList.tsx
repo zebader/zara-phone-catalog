@@ -4,7 +4,7 @@ import styles from './CartList.module.css';
 
 export const CartList = ({ cart }: { cart: Array<CartItem> }) => {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} aria-label="Cart items">
       {cart.map((item) => (
         <CartListItem key={item.id} {...item} />
       ))}

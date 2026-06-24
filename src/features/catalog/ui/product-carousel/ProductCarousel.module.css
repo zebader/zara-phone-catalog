@@ -22,7 +22,8 @@
     scrollbar-color: var(--color-primary) var(--color-disabled);
     
     height: fit-content;
-    white-space: nowrap; 
+    white-space: nowrap;
+    list-style: none;
 }
 
 

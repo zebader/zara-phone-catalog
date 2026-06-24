@@ -3,10 +3,12 @@ import { ProductCard } from "../product-card/ProductCard";
 import styles from './ProductGrid.module.css';
 export const ProductGrid = ({ products }: { products: Array<PhoneProduct> }) => {
   return (
-    <div className={styles.container}>
+    <ul className={styles.container} aria-label="Products">
       {products.map((product, index) => (
-        <ProductCard key={product.id + index} product={product}/>
+        <li key={product.id + index}>
+          <ProductCard product={product}/>
+        </li>
       ))}
-    </div>
+    </ul>
   );
 }

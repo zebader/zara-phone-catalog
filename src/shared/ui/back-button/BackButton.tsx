@@ -7,8 +7,8 @@ import { useRouter } from 'next/navigation';
 export const BackButton = () => {
   const router = useRouter();
   return (
-    <button className={styles.backButton} onClick={() => router.back()}>
-      <Image src={ArrowLeft} alt="back" width={10} height={10} />
+    <button type="button" className={styles.backButton} onClick={() => router.back()} aria-label="Go back to the previous page">
+      <Image src={ArrowLeft} alt="" width={10} height={10} aria-hidden="true" />
       <span className="title-3">back</span>
     </button>
   );
