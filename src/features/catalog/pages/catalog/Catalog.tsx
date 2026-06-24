@@ -4,7 +4,7 @@ import { SearchBarWrapper } from "../../ui/search-bar/search-bar-wrapper/SearchB
 import styles from './Catalog.module.css';
 import { ProductGrid } from "../../ui/product-grid/ProductGrid";
 
-export const Catalog = async ({ searchParams }: { searchParams: Promise<{ search: string }> }) => {
+export const Catalog = async ({ searchParams }: { searchParams: Promise<{ search?: string }> }) => {
   const { search } = await searchParams;
 
   let products: Array< PhoneProduct > = [];

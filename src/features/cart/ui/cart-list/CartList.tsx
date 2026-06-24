@@ -6,7 +6,7 @@ export const CartList = ({ cart }: { cart: Array<CartItem> }) => {
   return (
     <div className={styles.container} aria-label="Cart items">
       {cart.map((item) => (
-        <CartListItem key={item.id} {...item} />
+        <CartListItem key={item.id + item.storage + item.color} {...item} />
       ))}
     </div>
   );

@@ -21,7 +21,7 @@ export const Button = ({ children, onClick , fullWidth = false, disabled = false
       disabled={disabled}
       aria-label={label}
     >
-      {children || <p className={labelClasses}>{label}</p>}
+      {children || <span className={labelClasses}>{label}</span>}
     </button>
   );
 };

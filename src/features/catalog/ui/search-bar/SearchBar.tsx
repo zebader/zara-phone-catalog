@@ -11,7 +11,12 @@ export const SearchBar = () => {
   const [searchQuery, setSearchQuery] = useState(search ?? '');
 
   const handleSearch = useDebouncedCallback((value) => {
-    replace(`/catalog?search=${value}`);
+    if (!value) {
+      replace('/catalog');
+      return;
+    }
+
+    replace(`/catalog?search=${encodeURIComponent(value)}`);
   }, 500);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
