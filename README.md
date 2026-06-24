@@ -46,6 +46,16 @@ Abre [http://localhost:3000](http://localhost:3000) con el browser para ver el r
 
 ## Notas extra
 
+### Testing
+
+- Solo anotar que me hubiera gustado hacer los test desde una etapa mas temprana pero al tratarse de un proyecto largo requiere mucho tiempo y priorice tener todo el proyecto terminado primero, además me sirve para utilizar el tiempo sobrante en testear ,documentar y refactorizar components, para ello he usado Jest y testing library, cabe decir que testee solo en lo mas critico usando unit test y de integracion.
+
 ### Uso de IA
 
-- Como para este proyecto se pedia utilizar la IA la menor posible, me gustaria compartir para que he podido usarlo y por que, a pesar de usar cursor no he usado los agentes, excepto en modo ASK y gemini externamente para comprobar hipotesis, verificar si mi direccion era la correcta, etc, donde si he usado mas fue en el tema del grid por que queria probar alguna formas mas moderna o elegante de conseguir el borde y la animacion, aunque al final fue la opcion mas estandar, en el tema del context al usar el localStorage sabia que daria problemas asi que en vez de buscar use la IA para hacer el reseach de como hacerlo mejoer y me sugirio el hook useSyncExternalStore que no habia utilizado nunca. Por ultimo si que use cursor para correr un agente para hacer review del codigo y encontrar posibles mejoras, revisar si la accesibilidad estaba correctamente aplicada, empece con algunos textos en español y use la IA para cambiar todo lo español al ingles, etc... con un proyecto tan largo me ayudo a darle un vistazo desde otra perspectiva.
+- Como para este proyecto se pedia utilizar la IA la menor posible, me gustaria compartir para que he podido usarlo y por que, a pesar de usar cursor no he usado los agentes, excepto en modo ASK y gemini externamente para comprobar hipotesis, verificar si mi direccion era la correcta, etc, donde si he usado mas fue en el tema del grid por que queria probar alguna formas mas moderna o elegante de conseguir el borde y la animacion, aunque al final fue la opcion mas estandar, en el tema del context al usar el localStorage sabia que daria problemas asi que en vez de buscar use la IA para hacer el reseach de como hacerlo mejoer y me sugirio el hook useSyncExternalStore que no habia utilizado nunca, tambien me he servido de IA para los tests. Por ultimo si que use cursor para correr un agente para hacer review del codigo y encontrar posibles mejoras, revisar si la accesibilidad estaba correctamente aplicada, empece con algunos textos en español y use la IA para cambiar todo lo español al ingles, etc... con un proyecto tan largo me ayudo a darle un vistazo desde otra perspectiva.
+
+### TODO
+
+- Añadir skeletons para dar feedback al usuario de que se esta haciendo un request
+- Mejorar el defensive programming de algunos componentes que no he tenido tiempo para evitar mostrar partes si no se pasan props sobre todo si viene de la api y crear mas test para esto.
+- Mejorar la gestión de los textos, ahora mismo estan hardcodeados.

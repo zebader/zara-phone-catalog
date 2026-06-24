@@ -3,6 +3,7 @@ import { PhoneProduct } from "@/shared/types/api";
 import { SearchBarWrapper } from "../../ui/search-bar/search-bar-wrapper/SearchBarWrapper";
 import styles from './Catalog.module.css';
 import { ProductGrid } from "../../ui/product-grid/ProductGrid";
+
 export const Catalog = async ({ searchParams }: { searchParams: Promise<{ search: string }> }) => {
   const { search } = await searchParams;
 

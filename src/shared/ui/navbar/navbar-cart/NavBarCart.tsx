@@ -14,7 +14,11 @@ export const NavBarCart = () => {
   return (
 
     <Link href="/cart" className={styles.container} aria-label={`Go to cart, ${cartCount} items in the cart`}>
-      {isCartActive ? <Image src={cartActive} alt="" aria-hidden="true" width={24} height={24} /> : <Image src={cartInactive} alt="" aria-hidden="true" width={24} height={24} />}
+      {isCartActive ? (
+        <Image src={cartActive} alt="Cart with items" width={24} height={24} />
+      ) : (
+        <Image src={cartInactive} alt="Empty cart" width={24} height={24} />
+      )}
       <span className={styles.cartItemsAmount} aria-live="polite">{cartCount}</span>
     </Link>
 
