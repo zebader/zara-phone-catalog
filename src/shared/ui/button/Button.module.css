@@ -8,6 +8,13 @@
     text-align: center;
 }
 
+.outline {
+    background-color: transparent;
+    color: var(--color-primary);
+    outline: 1px solid var(--color-primary);
+    outline-offset: -1px;   
+}
+
 .button.fullWidth {
     width: 100%;
 }
@@ -24,4 +31,8 @@
 
 .label.disabled {
     color: var(--color-disabled-contrast);
+}
+
+.label.outlined {
+    color: var(--color-primary);
 }

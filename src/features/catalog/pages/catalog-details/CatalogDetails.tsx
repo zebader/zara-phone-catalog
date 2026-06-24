@@ -36,8 +36,7 @@ export const CatalogDetails = async ({ params }: { params: Promise<{ id: string 
         </div>
       </div>
       <div className={styles.container}>
-
-        <ProductMedia colorOptions={colorOptions} name={name} basePrice={basePrice} storageOptions={storageOptions} />
+        <ProductMedia colorOptions={colorOptions} name={name} basePrice={basePrice} storageOptions={storageOptions} id={id} />
         <ProductSpecsList specs={fullProductSpecs} />
         <ProductCarousel products={similarProducts} title="Similar items" />
       </div>

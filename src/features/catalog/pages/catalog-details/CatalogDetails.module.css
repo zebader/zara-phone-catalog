@@ -3,7 +3,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: var(--size-xlarge);
     width: 100%;
     padding: var(--size-xlarge) var(--page-padding);
     margin: 0 auto;

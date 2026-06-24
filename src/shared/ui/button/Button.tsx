@@ -6,11 +6,12 @@ type ButtonProps = PropsWithChildren<{
   fullWidth?: boolean;
   disabled?: boolean;
   label?: string;
+  outline?: boolean;
 }>;
 
-export const Button = ({ children, onClick , fullWidth = false, disabled = false, label = '' }: ButtonProps) => {
-  const buttonClasses = `${styles.button} ${fullWidth ? styles.fullWidth : ''} ${disabled ? styles.disabled : ''}`;
-  const labelClasses = `${styles.label} ${disabled ? styles.disabled : ''} ${label ? 'title-3' : ''}`;
+export const Button = ({ children, onClick , fullWidth = false, disabled = false, label = '', outline = false }: ButtonProps) => {
+  const buttonClasses = `${styles.button} ${fullWidth ? styles.fullWidth : ''} ${disabled ? styles.disabled : ''} ${outline ? styles.outline : ''}`;
+  const labelClasses = `${styles.label} ${disabled ? styles.disabled : ''} ${label ? 'title-3' : ''} ${outline ? styles.outlined : ''}`;
 
   return <button className={buttonClasses} onClick={onClick}>{children || <p className={labelClasses}>{label}</p>}</button>;
 };

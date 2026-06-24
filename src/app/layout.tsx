@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { NavBar } from "@/shared/ui";
+import { CartProvider } from "@/shared/contexts";
 
 export const metadata: Metadata = {
   title: "Zara challenge",
@@ -15,8 +16,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <NavBar />
-        {children}
+        <CartProvider>
+          <NavBar />
+          {children}
+        </CartProvider>
       </body>
     </html>
   );
