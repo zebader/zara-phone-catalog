@@ -7,7 +7,7 @@ export const ProductCard = ({ product }: { product: PhoneProduct }) => {
     <div className={styles.container}>
       <Link href={`/catalog/${product.id}`} className={styles.cardContent} aria-label={`View details for ${product.name ?? 'product'}`}>
         {product.imageUrl && <div className={styles.imageContainer}>
-          <Image className={styles.image} src={product.imageUrl} alt="" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" loading="lazy" aria-hidden="true"/>
+          <Image className={styles.image} src={product.imageUrl} alt="" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" loading="eager" aria-hidden="true"/>
         </div>}
         <div className={styles.content}>
           <div className={styles.contentBrandContainer}>

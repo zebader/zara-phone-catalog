@@ -70,8 +70,8 @@ export const ProductMedia = ({ colorOptions, name, basePrice, storageOptions, id
 
   return (
     <div className={styles.mediaContainer}>
-      <div className={styles.imageContainer}>
-        <Image className={styles.image} src={selection.image} alt={`${name}, ${selection.color}`} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+      <div className={styles.imageContainer} aria-label={`Product image for ${name}, ${selection.color}`}>
+        <Image className={styles.image} src={selection.image} alt={`${name}, ${selection.color}`} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" loading="eager" aria-hidden="true" />
       </div>
       <div className={styles.mediaContent}>
         <div className={styles.mediaContentTitle}>
